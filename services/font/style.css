@@ -1,110 +1,356 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Poppins:wght@400;500;600&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-body {
-  background: #020617;
-  color: #e2e8f0;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* ANIMATED BG */
-.bg-animation {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: 
-    radial-gradient(circle at 20% 30%, #1d4ed8 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, #0891b2 0%, transparent 50%);
-  filter: blur(120px);
-  z-index: -1;
-  animation: float 20s infinite ease-in-out;
-}
-@keyframes float {
-  0%,100% { transform: translate(0,0) scale(1); }
-  50% { transform: translate(50px, -30px) scale(1.1); }
+body{
+    min-height:100vh;
+    background:#050b18;
+    color:white;
+    overflow-x:hidden;
 }
 
-/* HEADER GLASS */
-header {
-  display: flex;
-  flex-direction: column; /* uda pahalata */
-  align-items: center;
-  justify-content: center;
-  gap: 18px; /* logo ekai buttons ekai athara ida */
-  padding: 20px 5%;
-  background: rgba(2, 6, 23, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+
+/* Animated Background */
+
+.bg-animation{
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#0066ff55,transparent 70%);
+    top:-200px;
+    left:-200px;
+    filter:blur(80px);
+    z-index:-1;
 }
 
-.logo {
-  font-size: 30px; /* size loku karala */
-  font-weight: 800;
-  font-family: 'Orbitron', sans-serif;
+.bg-animation::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,#9d00ff44,transparent 70%);
+    right:-700px;
+    bottom:-600px;
 }
 
-.nav-buttons {
-  display: flex;
-  gap: 12px; /* button 2 athara ida */
+
+/* Header */
+
+header{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:25px 0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.nav-btn {
-  padding: 10px 20px;
-  border-radius: 14px;
-  /* ...kalanin thibba dewal... */
-}
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 36px;
-  font-weight: 900;
-  color: #fff;
-}
-.logo span { color: #38bdf8; text-shadow: 0 0 15px #38bdf8; }
-nav a {
-  color: #cbd5e1;
-  text-decoration: none;
-  margin-left: 35px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-nav a:hover { color: #38bdf8; text-shadow: 0 0 10px #38bdf8; }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px 60px;
-}
-.hero h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 60px;
-  line-height: 1.2;
-}
-.hero h1 span {
-  background: linear-gradient(90deg, #38bdf8, #818cf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.hero p {
-  font-size: 18px;
-  color: #94a3b8;
-  margin: 20px 0 50px;
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#55c8ff;
 }
 
-/* INPUT WRAPPER */
-.input-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  max-width: 700px;
-  margin: auto;
+.logo span{
+    margin-left:8px;
 }
-#inputText {
+
+
+/* Navigation */
+
+.nav-buttons{
+    display:flex;
+    gap:12px;
+}
+
+.nav-btn{
+
+    text-decoration:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+
+    background:#101c33;
+    border:1px solid #263858;
+
+    transition:.3s;
+}
+
+
+.nav-btn:hover,
+.nav-btn.active{
+
+    background:linear-gradient(135deg,#008cff,#6d00ff);
+    box-shadow:0 0 20px #007bff;
+}
+
+
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:50px 20px;
+}
+
+
+.hero h1{
+
+    font-size:45px;
+    margin-bottom:20px;
+
+}
+
+
+.hero h1 span{
+
+    color:#55c8ff;
+    text-shadow:0 0 20px #008cff;
+
+}
+
+
+.hero p{
+
+    color:#b8c7dc;
+    line-height:1.8;
+    font-size:15px;
+
+}
+
+
+
+/* Input */
+
+.input-wrapper{
+
+    margin:35px auto;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+
+.input-wrapper input{
+
+    width:280px;
+    padding:15px 20px;
+
+    background:#101a2d;
+    color:white;
+
+    border:1px solid #284268;
+    border-radius:30px;
+    outline:none;
+
+}
+
+
+.input-wrapper button{
+
+    padding:15px 25px;
+
+    border:none;
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#008cff,#7200ff);
+
+    color:white;
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+/* Generator */
+
+.generator{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+
+.generator h2{
+
+    text-align:center;
+    margin-bottom:30px;
+    color:#55c8ff;
+
+}
+
+
+/* Font Cards */
+
+.fonts-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+
+.font-card{
+
+    background:rgba(15,25,45,.85);
+
+    border:1px solid rgba(80,180,255,.2);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    text-align:center;
+
+    backdrop-filter:blur(15px);
+
+    transition:.35s;
+
+}
+
+
+.font-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00aaff;
+
+    box-shadow:
+    0 0 25px rgba(0,150,255,.4);
+
+}
+
+
+
+.font-text{
+
+    font-size:25px;
+
+    margin-bottom:18px;
+
+    word-break:break-word;
+
+    color:#ffffff;
+
+}
+
+
+
+/* Copy Button */
+
+
+.font-card button{
+
+    border:none;
+
+    padding:10px 25px;
+
+    border-radius:25px;
+
+    background:#008cff;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.font-card button:hover{
+
+    background:#7200ff;
+
+    box-shadow:0 0 15px #008cff;
+
+}
+
+
+
+/* Footer */
+
+
+footer{
+
+    text-align:center;
+
+    margin-top:70px;
+
+    padding:25px;
+
+    color:#9bb0ca;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+
+footer p{
+
+    font-size:14px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+header{
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+
+.input-wrapper{
+
+    flex-direction:column;
+
+}
+
+
+.input-wrapper input,
+.input-wrapper button{
+
+    width:100%;
+
+}
+
+
+.fonts-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}#inputText {
   flex: 1;
   padding: 20px 25px;
   font-size: 18px;
