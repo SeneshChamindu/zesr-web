@@ -173,4 +173,22 @@ body::after{
     font-size:21px;
 }
 
+}.footer{
+    margin-top:80px;
+    padding:25px 15px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    background:#081423;
+}
+
+.footer p{
+    color:#9cb3cf;
+    font-size:14px;
+    letter-spacing:.5px;
+}
+
+.footer span{
+    color:#4db8ff;
+    font-weight:600;
+    text-shadow:0 0 10px rgba(77,184,255,.5);
 }
