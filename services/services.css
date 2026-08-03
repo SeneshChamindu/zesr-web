@@ -58,7 +58,7 @@ body::after{
 .hero h1{
     font-size:38px;
     color:#4eb8ff;
-    margin-bottom:10px;
+    margin-bottom:0px;
 }
 
 .hero p{
