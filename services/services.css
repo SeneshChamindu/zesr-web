@@ -58,7 +58,7 @@ body::after{
 .hero h1{
     font-size:38px;
     color:#4eb8ff;
-    margin-bottom:0px;
+    margin-bottom:10px;
 }
 
 .hero p{
@@ -83,7 +83,7 @@ body::after{
     border:1px solid rgba(255,255,255,.08);
     border-radius:22px;
     overflow:hidden;
-    margin-bottom:-65px;
+    margin-bottom:0px;
     backdrop-filter:blur(16px);
     transition:.45s;
     box-shadow:0 15px 35px rgba(0,0,0,.45);
