@@ -108,3 +108,6 @@ behavior:"smooth"
 });
 
 });
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
