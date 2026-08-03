@@ -215,3 +215,30 @@ nav{
 }
 
 }
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 999999;
+}
+
+.top-buttons button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #FFD700;
+    background: #1a1a1a;
+    color: #FFD700;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #FFD700;
+    transition: 0.3s;
+}
+
+.top-buttons button:hover{
+    background: #FFD700;
+    color: #000;
+    transform: scale(1.1);
+}
