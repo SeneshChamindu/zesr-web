@@ -63,14 +63,14 @@ header {
 /* --- LOGO FIX (ਲොකු කළා, හිඩැස් හැදුවා) --- */
 .logo {
     font-family: var(--font-title);
-    font-size: 28px; /* ප්‍රමාණය වැඩි කළා */
+    font-size: 32px; /* ප්‍රමාණය වැඩි කළා */
     font-weight: 900;
     text-decoration: none;
     color: var(--text-main);
     display: flex;
     align-items: center;
     gap: 10px;
-    letter-spacing: 0.5px; /* හිඩැස් අඩු කර එක ළඟට ගත්තා */
+    letter-spacing: 1px; /* හිඩැස් අඩු කර එක ළඟට ගත්තා */
     text-transform: uppercase;
 }
 
