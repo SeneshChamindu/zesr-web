@@ -236,18 +236,13 @@ header{
 
 
 
-.font-text{
-
-    font-size:25px;
-
-    margin-bottom:18px;
-
-    word-break:break-word;
-
-    color:#ffffff;
-
 }
-
+.font-text {
+  font-size: 22px;
+  margin-bottom: 15px;
+  word-break: break-all;
+  font-family: 'Noto Sans', sans-serif; /* meka add kala */
+}
 
 
 /* Copy Button */
