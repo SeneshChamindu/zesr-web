@@ -63,7 +63,7 @@ header {
 /* --- LOGO FIX (ਲොකු කළා, හිඩැස් හැදුවා) --- */
 .logo {
     font-family: var(--font-title);
-    font-size: 32px; /* ප්‍රමාණය වැඩි කළා */
+    font-size: 36px; /* ප්‍රමාණය වැඩි කළා */
     font-weight: 900;
     text-decoration: none;
     color: var(--text-main);
