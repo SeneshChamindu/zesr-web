@@ -103,6 +103,7 @@ results.innerHTML+=`
 });
 
 }
+generateFonts();
 let val = convert(txt, m);
 
 results.innerHTML += `
@@ -114,4 +115,3 @@ results.innerHTML += `
 </button>
 </div>
 `;
-generateFonts();
