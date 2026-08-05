@@ -8,14 +8,13 @@
 }
 
 body{
-    background:#050A1A;
-    color:#fff;
+    background:#000000; /* Pure Black */
+    color:#EAEAEA; /* Podi sudu */
     font-family:'Poppins',sans-serif;
     overflow-x:hidden;
 }
 
 /* Header */
-
 header{
     width:100%;
     padding:20px 8%;
@@ -26,32 +25,32 @@ header{
     top:0;
     left:0;
     z-index:100;
-    background:rgba(5,10,26,.6);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(0,123,255,.2);
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
     font-family:'Cinzel',serif;
     font-size:32px;
-    color:#00A3FF; /* Golden -> Dark Blue */
+    color:#FFFFFF; /* Logo eka sudu */
     font-weight:bold;
     letter-spacing:4px;
+    text-shadow:0 0 10px rgba(255,255,255,.3);
 }
 
 nav a{
-    color:#fff;
+    color:#CCCCCC;
     text-decoration:none;
     margin-left:25px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#00A3FF; /* Golden -> Dark Blue */
+    color:#FFFFFF;
 }
 
 /* Hero */
-
 .hero{
     min-height:100vh;
     display:flex;
@@ -67,8 +66,8 @@ nav a:hover{
     height:270px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid #00A3FF; /* Golden -> Dark Blue */
-    box-shadow:0 0 40px rgba(0,163,255,.8);
+    border:4px solid #FFFFFF; /* Sudu border */
+    box-shadow:0 0 35px rgba(255,255,255,.25);
     animation:float 4s ease-in-out infinite;
 }
 
@@ -76,17 +75,16 @@ nav a:hover{
     margin-top:30px;
     font-size:52px;
     font-family:'Cinzel',serif;
-    color:#00A3FF; /* Golden -> Dark Blue */
+    color:#FFFFFF; /* Name eka sudu */
 }
 
 .hero p{
     margin-top:15px;
-    color:#B0C4DE;
+    color:#A0A0A0; /* Gray */
     letter-spacing:3px;
 }
 
 /* Buttons */
-
 .buttons{
     margin-top:40px;
     display:flex;
@@ -97,14 +95,126 @@ nav a:hover{
 
 .btn{
     text-decoration:none;
-    color:#fff;
-    background:#0057B8; /* Golden -> Dark Blue */
+    color:#000;
+    background:#FFFFFF; /* Sudu button */
     padding:15px 35px;
     border-radius:40px;
     font-weight:bold;
     transition:.3s;
-    box-shadow:0 0 25px rgba(0,87,184,.5);
+    box-shadow:0 0 20px rgba(255,255,255,.2);
 }
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 35px rgba(255,255,255,.4);
+    background:#F0F0F0;
+}
+
+.outline{
+    background:transparent;
+    border:2px solid #FFFFFF;
+    color:#FFFFFF;
+}
+
+.outline:hover{
+    background:#FFFFFF;
+    color:#000000;
+}
+
+/* Social - ORIGINAL BRAND COLORS */
+.social{
+    margin-top:40px;
+}
+
+.social a{
+    font-size:28px;
+    margin:0 12px;
+    transition:.3s;
+    display:inline-block;
+}
+
+.social a:hover{
+    transform:scale(1.2) translateY(-3px);
+}
+
+/* Brand Colors */
+.social a:nth-child(1){ color:#1877F2; } /* Facebook */
+.social a:nth-child(2){ color:#E4405F; } /* Instagram */
+.social a:nth-child(3){ color:#FFFFFF; } /* Github */
+.social a:nth-child(4){ color:#25D366; } /* WhatsApp */
+.social a:nth-child(5){ color:#0088CC; } /* Telegram */
+
+/* Floating Animation */
+@keyframes float{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-12px); }
+    100%{ transform:translateY(0); }
+}
+
+/* Background Glow - podi sudu glow */
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:#FFFFFF;
+    filter:blur(250px);
+    opacity:.05;
+    top:-200px;
+    right:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#CCCCCC;
+    filter:blur(250px);
+    opacity:.03;
+    bottom:-200px;
+    left:-150px;
+    z-index:-1;
+}
+
+/* Mobile */
+@media(max-width:768px){
+header{ padding:20px; }
+nav{ display:none; }
+.hero h1{ font-size:36px; }
+.profile{ width:220px; height:220px; }
+.buttons{ flex-direction:column; width:100%; }
+.btn{ width:90%; margin:auto; }
+}
+
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 999;
+}
+
+.top-buttons button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    background: #111111;
+    color: #FFFFFF;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255,255,255,.2);
+    transition: 0.3s;
+}
+
+.top-buttons button:hover{
+    background: #FFFFFF;
+    color: #000000;
+    transform: scale(1.1);
+}}
 
 .btn:hover{
     transform:translateY(-5px);
